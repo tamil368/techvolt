@@ -4,50 +4,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>24/7 Smart Car System</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./logo.png">
+    <style>
+        .header {
+            background-color: black;
+        }
+
+        .bodygrid1{
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border: none;
+            border-radius: 20px;
+            margin: 20px auto;
+            padding: 20px;
+           /* box-shadow: 0px 0px 15px 10px rgb(206, 203, 203);*/
+        }
+        
+        .sell-car-number {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border: none;
+            border-radius: 20px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 15px 10px rgb(206, 203, 203);
+        }
+        .sell-car-number:hover{
+            box-shadow: 0px 0px 15px 10px rgb(206, 203, 203);
+        }
+
+        .well {
+            background-color: #f5f5f5;
+            border: 1px solid #0e0c0c;
+            border-radius: 2px;
+            padding: 20px;
+        }
+
+        
+        .box {
+            background-color: #f5f5f5;
+            border: 1px solid #0e0c0c;
+            border-radius: 2px;
+            padding: 20px;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            border-radius: 20px;
+            margin-top: -15px;
+        }
+
+        .img-responsive {
+            padding-bottom: 3px;
+            height: 100px;
+            width: 100%;
+        }
+
+        .footer {
+            background-color: #181818;
+            color: bisque;
+            padding: 20px 0;
+            text-align: center;
+        
+        }
+        .well:hover{
+            box-shadow: 0px 0px 15px 10px rgb(206, 203, 203);
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container-fluid">
+        <img class="img-responsive" src="./banner_header.gif">
+    </div>
 
-    <nav class="navbar navbar-inverse navbar-danger">
+    <nav class="navbar navbar-inverse custom-navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="#" style="font-family: 'Times New Roman', Times, serif;"><img src="./logo.png" style="margin-top: -10px;"  ></a>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="./logo.png"></a>
             </div>
-            
-            <div class="collapso navbar-collapso" id="#myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
+                    <li class="active"><a href="#">Home</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Buying Cars<span class="caret"></span></a>
-                        <ul class="dropdown-menu ">
-                            <li><a href="#">Used Cars</a></li>
-                            <li><a href="#">New models</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Selling Cars <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">New Cars <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Models</a></li>
+                            <li><a href="#">Electric Cars</a></li>
+                            <li><a href="#">Fuel Cars</a></li>
+                            <li><a href="#">Diesel Cars</a></li>
                         </ul>
                     </li>
-                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy & Sell Used Cars <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Buy Used Cars</a></li>
+                            <li><a href="#">Sell My Car</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
+                    <li><a href="#">Register <span class="glyphicon glyphicon-user"></span></a></li>
                 </ul>
             </div>
-            
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="bodygrid1 text-center">
+                    <h2>Sell your car from home for the best price</h2><br>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="box custom-size">
+                                <span class="fa fa-car"><br><strong> Verified Car Buyers</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="box custom-size">
+                                <span class="fa fa-inr"><br><strong> Zero Commission</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="box custom-size">
+                                <span class="glyphicon glyphicon-phone-alt"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="sell-car-number text-center">
+                    <h2>Enter Your Car Register Number</h2>
+                    <div class="form-group">
+                        <input type="text" name="rg-number" id="rg-number" class="form-control" placeholder="Enter your car register number">
+                        <button class="btn btn-danger btn-primary" style="margin-top: 10px;">Sell my car</button>
+                    </div>
+                    <hr> OR <hr>
+                    <h2>Select your Brand For Buy</h2>
+                    <div class="brands">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong> Verified Car Buyers</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong> Zero Commission</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="well custom-size">
+                                <span class="fa fa-car"><br><strong>No Unwanted Calls</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 24/7 Smart Car System. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

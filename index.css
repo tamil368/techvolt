@@ -1,7 +1,24 @@
-img{
-    border-radius: 20px;
-    width: 50px;
+*{
+    font-family: 'Times New Roman', Times, serif;
 }
-.navbar{
-    height: 60px;
+.custom-navbar {
+    background-color: #61606a;
+    border-color: #424642; 
+    color: white; 
 }
+
+.custom-navbar .navbar-brand,
+.custom-navbar .navbar-nav>li>a {
+    color: white; 
+}
+
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .navbar-nav>li>a:hover {
+    color: #f1f1f1; 
+}
+
+.custom-navbar {
+    box-shadow: 0 0px 15px 10px rgba(42, 40, 40, 0.1);
+}
+
+
