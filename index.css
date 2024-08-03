@@ -20,5 +20,16 @@
 .custom-navbar {
     box-shadow: 0 0px 15px 10px rgba(42, 40, 40, 0.1);
 }
+.social-links {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: bisque;
+}
 
-
+.footer {
+    background-color: #373738;
+    color: bisque;
+    padding: 20px 0;
+    text-align: center;
+}
