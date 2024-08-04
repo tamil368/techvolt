@@ -6,6 +6,17 @@
     border-color: #424642; 
     color: white; 
 }
+.navbar-brand img {
+    width: 50px;
+    border-radius: 20px;
+    margin-top: -15px;
+}
+
+.img-responsive {
+    padding-bottom: 3px;
+    height: 100px;
+    width: 100%;
+}
 
 .custom-navbar .navbar-brand,
 .custom-navbar .navbar-nav>li>a {
@@ -26,6 +37,12 @@
     height: 30px;
     background-color: bisque;
 }
+.navbar-brand img {
+    width: 50px;
+    border-radius: 20px;
+    margin-top: -15px;
+}
+
 
 .footer {
     background-color: #373738;

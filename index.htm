@@ -69,10 +69,50 @@
             width: 100%;
         }
 
-       
+        .footer {
+            background-color: #181818;
+            color: bisque;
+            padding: 20px 0;
+            text-align: center;
+        }
 
         .well:hover {
             box-shadow: 0px 0px 15px 10px rgb(180, 180, 153);
+        }
+
+        .glyphicon-lg {
+            font-size: 1.33em;
+        }
+
+        .glyphicon-2x {
+            font-size: 2em;
+        }
+
+        .glyphicon-3x {
+            font-size: 3em;
+        }
+
+        .glyphicon-4x {
+            font-size: 4em;
+        }
+
+        .glyphicon-5x {
+            font-size: 5em;
+        }
+
+        .brand-box img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 50px;
+            height: auto;
+        }
+
+        .brand-box span {
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -112,7 +152,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
+                    <li><a href="./login.htm">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
                     <li><a href="#">Register <span class="glyphicon glyphicon-user"></span></a></li>
                 </ul>
             </div>
@@ -155,56 +195,71 @@
                         <input type="text" name="rg-number" id="rg-number" class="form-control" placeholder="Enter your car register number">
                         <button class="btn btn-danger btn-primary" style="margin-top: 10px;">Sell my car</button>
                     </div>
-                    <hr> OR <hr>
-                    <h2>Select your Brand For Buy</h2>
-                    <div class="brands">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br> <br><strong> Tesla</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong> Honda</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong>Toyota</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong>Ford</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong>Kia</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong>BMW</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong>Audi</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong>Ferrari</strong></span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="well custom-size">
-                                    <span class="fa fa-car"><br><br><strong>Nissan</strong></span>
-                                </div>
-                            </div>
-                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <center><h1>OR</h1></center>
+    </div>
+    
+    <div class="container">
+       <center><h2>Select your Brand For Buy</h2></center> 
+        <div class="brands">
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./tesla.png" alt="Tesla">
+                        <span>Tesla</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./Honda.png" alt="Honda">
+                        <span>Honda</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./toyota.png" alt="Toyota">
+                        <span>Toyota</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./ford.png" alt="Ford">
+                        <span>Ford</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./Kia.png" alt="Kia">
+                        <span>Kia</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./bmw.png" alt="BMW">
+                        <span>BMW</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./audi.png" alt="Audi">
+                        <span>Audi</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./ferrari.png" alt="Ferrari">
+                        <span>Ferrari</span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="well brand-box">
+                        <img class="img-responsive" src="./nissan.png" alt="Nissan">
+                        <span>Nissan</span>
                     </div>
                 </div>
             </div>
@@ -216,14 +271,14 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <h3>About Us</h3>
-                    <p>Information about 24 / 7 Smart Car System Company</p>
+                    <p>Information about 24/7 Smart Car System Company</p>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <h3>Contact Us</h3>
                     <p>Phone no: +919876543210</p>
-                  <p>Email:  <a href="https://www.gmail.com"> smartcarsystem@example.com</a> </p>
+                    <p>Email: <a href="https://www.gmail.com">smartcarsystem@example.com</a></p>
                     <div class="footer-social-links">
-                        <a href="https://www.facebook.com"><i class="fa fa-facebook fa-3x " style="padding-right: 10px;"></i></a>
+                        <a href="https://www.facebook.com"><i class="fa fa-facebook fa-3x" style="padding-right: 10px;"></i></a>
                         <a href="#"><i class="fa fa-twitter fa-3x" style="padding-right: 10px;"></i></a>
                         <a href="#"><i class="fa fa-whatsapp fa-3x" style="padding-right: 10px;"></i></a>
                     </div>
