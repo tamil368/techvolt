@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>E-commerce Login</title>
+  <style>
+    * {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .box {
+      background-image: url('logo2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      padding: 20px;
+      background-color: rgba(42, 40, 40, 0.8);
+    }
+    form {
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 20px;
+      box-shadow: 1px 10px 10px 10px slategrey;
+      background-color: rgba(255, 255, 255, 0.8);
+      height: auto;
+    }
+    .glyphicon-3x {
+      font-size: 3em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <div class="box">
+          <form name="loginForm" onsubmit="return validateForm()">
+            <div class="text-center">
+              <h2>Login</h2>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <div class="input-group">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" autofocus>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <div class="input-group">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="userType">Login as:</label>
+              <select class="form-control" id="userType" name="userType">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <div class="text-center">
+              <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      var username = document.forms["loginForm"]["username"].value;
+      var password = document.forms["loginForm"]["password"].value;
+      var userType = document.forms["loginForm"]["userType"].value;
+
+      if (username == "" || password == "") {
+        alert("Username and Password must be filled out");
+        return false;
+      }
+
+      // You can add further validation and authentication logic here
+      // For example, send an AJAX request to the server to validate the credentials
+
+      // Example for demonstration purposes:
+      if (userType === "admin" && username === "admin" && password === "admin") {
+        alert("Admin login successful");
+        // Redirect to admin dashboard
+        window.location.href = '';
+      } else if (userType === "user" && username === "user" && password === "user") {
+        alert("User login successful");
+        // Redirect to user dashboard
+        window.location.href = "user_dashboard.py";
+      } else {
+        alert("Invalid credentials");
+        return false;
+      }
+
+      return false; // Prevent form submission for demonstration purposes
+    }
+  </script>
+</body>
+</html>

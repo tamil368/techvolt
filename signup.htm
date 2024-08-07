@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>24/7 Smart Car System</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./logo.png">
+    <style>
+        .box {
+            background-image: url('../logo2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: rgba(42, 40, 40, 0.8);
+        }
+
+        form {
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 1px 10px 10px 10px slategrey;
+            background-color: rgba(255, 255, 255, 0.8);
+            height: auto;
+        }
+
+        footer {
+            margin-top: 10px;
+        }
+
+        #id {
+            background-color: rgb(246, 203, 255);
+        }
+
+        .header {
+            background-color: black;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            border-radius: 20px;
+            margin-top: -15px;
+        }
+
+        .img-responsive {
+            padding-bottom: 3px;
+            height: 100px;
+            width: 100%;
+        }
+
+        .footer {
+            background-color: #181818;
+            color: bisque;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .glyphicon-3x {
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <img class="img-responsive" src="./banner_header.gif">
+    </div>
+
+    <nav class="navbar navbar-inverse custom-navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.htm"><img src="./logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">New Cars <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Electric Cars</a></li>
+                            <li><a href="#">Fuel Cars</a></li>
+                            <li><a href="#">Diesel Cars</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy & Sell Used Cars <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Buy Used Cars</a></li>
+                            <li><a href="#">Sell My Car</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Register <span class="glyphicon glyphicon-user"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <div class="box">
+                    <div class="signup-form">
+                        <h2 class="text-center">Sign Up</h2>
+                        <form action="home.py" method="post" onsubmit="return validateForm()">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <div class="input-group">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <div class="input-group">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <div class="input-group">
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <div class="input-group">
+                                    <input type="password" id="password" name="password" class="form-control" pattern="[A-Z a-z 9 {8}]" placeholder="Enter your password" required>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="user-type">User Type:</label>
+                                <select id="user-type" name="user_type" class="form-control" required>
+                                    <option value="buyer">Buyer</option>
+                                    <option value="seller">Seller</option>
+                                </select>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" id="submit" class="btn btn-primary btn-block">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h3>About Us</h3>
+                    <p>Information about 24/7 Smart Car System Company</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h3>Contact Us</h3>
+                    <p>Phone no: +919876543210</p>
+                    <p>Email: <a href="mailto:smartcarsystem@example.com">smartcarsystem@example.com</a></p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com"><i class="fa fa-facebook fa-3x" style="padding-right: 10px;"></i></a>
+                        <a href="#"><i class="fa fa-twitter fa-3x" style="padding-right: 10px;"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp fa-3x" style="padding-right: 10px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <h2>&copy; 2017, All Rights Reserved</h2>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+            var userType = document.getElementById("user-type").value;
+
+            if (name === "" || email === "" || phone === "" || password === "" || userType === "") {
+                alert("All fields are required!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
+

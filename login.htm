@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,62 +11,72 @@
   <link rel="stylesheet" href="./index.css">
   <link rel="icon" href="./logo.png">
   <style>
-    .box {
-      background-image: url('../logo2.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 20px;
-      padding: 20px;
-      background-color: rgba(42, 40, 40, 0.8); /* Semi-transparent background for contrast */
+    * {
+      font-family: 'Times New Roman', Times, serif;
     }
-
-    form {
-      padding: 20px;
-      border: 1px solid black;
-      border-radius: 20px;
-      box-shadow: 1px 10px 10px 10px slategrey;
-      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-      height: auto; /* Adjust height to fit content */
+    .custom-navbar {
+      background-color: #61606a;
+      border-color: #424642;
+      color: white;
     }
-
-    footer {
-      margin-top: 10px;
-    }
-
-    #id {
-      background-color: rgb(246, 203, 255);
-    }
-
-    .header {
-      background-color: black;
-    }
-
     .navbar-brand img {
       width: 50px;
       border-radius: 20px;
       margin-top: -15px;
     }
-
     .img-responsive {
       padding-bottom: 3px;
       height: 100px;
       width: 100%;
     }
-
+    .custom-navbar .navbar-brand,
+    .custom-navbar .navbar-nav>li>a {
+      color: white;
+    }
+    .custom-navbar .navbar-brand:hover,
+    .custom-navbar .navbar-nav>li>a:hover {
+      color: #f1f1f1;
+    }
+    .custom-navbar {
+      box-shadow: 0 0px 15px 10px rgba(42, 40, 40, 0.1);
+    }
+    .social-links {
+      border-radius: 20px;
+      width: 30px;
+      height: 30px;
+      background-color: bisque;
+    }
     .footer {
-      background-color: #181818;
+      background-color: #373738;
       color: bisque;
       padding: 20px 0;
       text-align: center;
     }
-
+    .box {
+      background-image: url('logo2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      padding: 20px;
+      background-color: rgba(42, 40, 40, 0.8);
+    }
+    form {
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 20px;
+      box-shadow: 1px 10px 10px 10px slategrey;
+      background-color: rgba(255, 255, 255, 0.8);
+      height: auto;
+    }
+    footer {
+      margin-top: 10px;
+    }
     .glyphicon-3x {
       font-size: 3em;
     }
   </style>
 </head>
-
 <body>
   <div class="container-fluid">
     <img class="img-responsive" src="./banner_header.gif">
@@ -81,11 +90,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="./logo.png"></a>
+        <a class="navbar-brand" href="home.py"><img src="./logo.png"></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="home.py">Home</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">New Cars <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -103,8 +112,7 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="./login.htm">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
-          <li><a href="#">Register <span class="glyphicon glyphicon-user"></span></a></li>
+          <li><a href="signup.py">Signup <span class="glyphicon glyphicon-user"></span></a></li>
         </ul>
       </div>
     </div>
@@ -114,27 +122,34 @@
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <div class="box">
-          <form action="./basic.htm" name="admin" onsubmit="return valid()">
+          <form name="loginForm" onsubmit="return validateForm()">
             <div class="text-center">
-              <h2>Form Creation</h2>
+              <h2>Login</h2>
             </div>
             <br>
             <div class="form-group">
-              <label for="n">Name:</label>
+              <label for="username">Username:</label>
               <div class="input-group">
-                <input type="text" id="n" name="n" class="form-control" placeholder="Enter the name" autofocus>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" autofocus>
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
               </div>
             </div>
             <div class="form-group">
-              <label for="pass">Password:</label>
+              <label for="password">Password:</label>
               <div class="input-group">
-                <input type="password" id="pass" name="pass" class="form-control" placeholder="Enter the password">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
               </div>
             </div>
+            <div class="form-group">
+              <label for="userType">Login as:</label>
+              <select class="form-control" id="userType" name="userType">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
             <div class="text-center">
-              <input type="submit" class="btn btn-primary" value="SUBMIT">
+              <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block">Login</button>
             </div>
           </form>
         </div>
@@ -165,24 +180,36 @@
       </div>
     </div>
   </footer>
-<!-- 
-  <script>
-    function valid() {
-      var user = document.forms["admin"]["n"].value;
-      var pass = document.forms["admin"]["pass"].value;
 
-      if (user == "" && pass == "") {
-        alert("Re Enter");
-        return false;
-      } else if (user == "Admin" && pass == "Admin") {
-        alert("Login successfully");
-        return true;
-      } else {
-        alert("You are not admin");
+  <script>
+    function validateForm() {
+      var username = document.forms["loginForm"]["username"].value;
+      var password = document.forms["loginForm"]["password"].value;
+      var userType = document.forms["loginForm"]["userType"].value;
+
+      if (username == "" || password == "") {
+        alert("Username and Password must be filled out");
         return false;
       }
-    }
-  </script> -->
-</body>
+      if (userType === "admin" && username === "admin" && password === "admin") {
+        alert("Admin login successful");
+        
+        window.location.href = "admin_dashboard.py";
+      } else if (userType === "Buyer" && username === "user" && password === "user") {
+        alert("User login successful");
+      
+        window.location.href = "Buyer.py";
+      } else if (userType === "Seller" && username === "user" && password === "user") {
+        alert("User login successful");
+      
+        window.location.href = "Buyer.py";
+      }else {
+        alert("Invalid credentials");
+        return false;
+      }
 
+      return false; 
+    }
+  </script>
+</body>
 </html>
