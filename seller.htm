@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Seller Dashboard</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: #2d2e2f;
+        }
+
+        .navbar-brand,
+        .navbar-nav>li>a {
+            color: rgb(69, 66, 66);
+        }
+
+        .navbar-brand:hover,
+        .navbar-nav>li>a:hover {
+            color: #18bc9c;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            background-color: #42304a;
+            position: fixed;
+            top: 51px;
+            left: 0;
+            padding-top: 20px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #4d4e4e;
+            color: white;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .box {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .box h3 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 51px;
+                left: -250px;
+                width: 250px;
+                transition: left 0.3s ease;
+            }
+
+            .sidebar.in {
+                left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar a {
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Seller Dashboard</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.py"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar collapse" id="sidebar">
+        <a href="#add-vehicles"><i class="fa fa-car"></i> Add Car</a>
+        <a href="#vehicle-selection"><i class="fa fa-search"></i> Vehicle Selection</a>
+        <a href="#booking"><i class="fa fa-calendar"></i> Booking</a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#add-vehicles"><i class="fa fa-car"></i> Add Car</a>
+        <a href="#vehicle-selection"><i class="fa fa-search"></i> Vehicle Selection</a>
+        <a href="#booking"><i class="fa fa-calendar"></i> Booking</a>
+    </div>
+    <div class="main-content" style="padding-top: 60px;">
+        <div id="add-vehicles" class="container">
+            <div class="box">
+                <h2>Add Car Details</h2>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="vehicleName" class="col-sm-2 control-label">Car Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="vehicleName" placeholder="Vehicle Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleModel" class="col-sm-2 control-label">Model</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="vehicleModel" placeholder="Model">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleCost" class="col-sm-2 control-label">Cost</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="vehicleCost" placeholder="Cost">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleFeatures" class="col-sm-2 control-label">Features</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="vehicleFeatures" rows="3" placeholder="Car Features"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleImages" class="col-sm-2 control-label">Images</label>
+                        <div class="col-sm-10">
+                            <input type="file" id="vehicleImages" multiple>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Add Car</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="car-selection" class="container">
+            <div class="box">
+                <h2>CarSelection</h2>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="searchModel">Search by Model:</label>
+                        <input type="text" class="form-control" id="searchModel" placeholder="Model">
+                    </div>
+                    <div class="form-group">
+                        <label for="searchName">Search by Name:</label>
+                        <input type="text" class="form-control" id="searchName" placeholder="Car Name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="booking" class="container">
+            <div class="box">
+                <h2>Booking Details</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
