@@ -22,7 +22,7 @@ try:
     cur.execute(query, (name, email, phone, password, user_type))
     conn.commit()
     print("Content-type: text/html\n")
-    print('<script>alert("Registration successful!"); window.location.href="home.py";</script>')
+    print('<script>alert("Registration successful!"); window.location.href="index.html";</script>')
 except pymysql.MySQLError as e:
     print("Content-type: text/html\n")
     print(f'<script>alert("Error: {e}"); window.location.href="signup.py";</script>')
