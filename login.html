@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,44 +15,53 @@
     * {
       font-family: 'Times New Roman', Times, serif;
     }
+
     .custom-navbar {
       background-color: #61606a;
       border-color: #424642;
       color: white;
     }
+
     .navbar-brand img {
       width: 50px;
       border-radius: 20px;
       margin-top: -15px;
     }
+
     .img-responsive {
       padding-bottom: 3px;
       height: 100px;
       width: 100%;
     }
+
     .custom-navbar .navbar-brand,
     .custom-navbar .navbar-nav>li>a {
       color: white;
     }
+
     .custom-navbar .navbar-brand:hover,
     .custom-navbar .navbar-nav>li>a:hover {
       color: #f1f1f1;
     }
+
     .custom-navbar {
       box-shadow: 0 0px 15px 10px rgba(42, 40, 40, 0.1);
     }
+
     .social-links {
       border-radius: 20px;
       width: 30px;
       height: 30px;
       background-color: bisque;
     }
+
     .footer {
       background-color: #373738;
       color: bisque;
       padding: 20px 0;
       text-align: center;
     }
+
     .box {
       background-image: url('logo2.png');
       background-size: cover;
@@ -61,6 +71,7 @@
       padding: 20px;
       background-color: rgba(42, 40, 40, 0.8);
     }
+
     form {
       padding: 20px;
       border: 1px solid black;
@@ -69,14 +80,17 @@
       background-color: rgba(255, 255, 255, 0.8);
       height: auto;
     }
+
     footer {
       margin-top: 10px;
     }
+
     .glyphicon-3x {
       font-size: 3em;
     }
   </style>
 </head>
+
 <body>
   <div class="container-fluid">
     <img class="img-responsive" src="./banner_header.gif">
@@ -104,7 +118,8 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy & Sell Used Cars <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy & Sell Used Cars <span
+                class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Buy Used Cars</a></li>
               <li><a href="#">Sell My Car</a></li>
@@ -130,24 +145,29 @@
             <div class="form-group">
               <label for="username">Username:</label>
               <div class="input-group">
-                <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" autofocus>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username"
+                  autofocus>
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
               </div>
             </div>
             <div class="form-group">
               <label for="password">Password:</label>
               <div class="input-group">
-                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+                <input type="password" id="password" name="password" class="form-control"
+                  placeholder="Enter your password">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
               </div>
             </div>
-            <div class="form-group">
+              <div class="form-group">
               <label for="userType">Login as:</label>
               <select class="form-control" id="userType" name="userType">
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
+                <option value="accepted" class="defalut" >User Type</option>
+                <option value="Seller">Seller</option>
+                <option value="Buyer">Buyer</option>
               </select>
+
             </div>
+
             <div class="text-center">
               <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block">Login</button>
             </div>
@@ -183,33 +203,33 @@
 
   <script>
     function validateForm() {
-      var username = document.forms["loginForm"]["username"].value;
-      var password = document.forms["loginForm"]["password"].value;
-      var userType = document.forms["loginForm"]["userType"].value;
+      //  var username = document.forms["loginForm"]["username"].value;
+      //var password = document.forms["loginForm"]["password"].value;
+      //var userType = document.forms["loginForm"]["userType"].value;
+      //  if (username == "" || password == "") {
+      //      alert("Username and Password must be filled out");
+      //    return false;
+      //}
+      //if (userType === "admin" && username === "admin" && password === "admin") {
+      //  alert("Admin login successful");
 
-      if (username == "" || password == "") {
-        alert("Username and Password must be filled out");
-        return false;
-      }
-      if (userType === "admin" && username === "admin" && password === "admin") {
-        alert("Admin login successful");
-        
-        window.location.href = "admin_dashboard.py";
-      } else if (userType === "Buyer" && username === "user" && password === "user") {
-        alert("User login successful");
-      
-        window.location.href = "Buyer.py";
-      } else if (userType === "Seller" && username === "user" && password === "user") {
-        alert("User login successful");
-      
-        window.location.href = "Buyer.py";
-      }else {
-        alert("Invalid credentials");
-        return false;
-      }
+      //window.location.href = "admin_dashboard.py";
+      // } else if (userType === "Buyer" && username === "user" && password === "user") {
+      // alert("User login successful");
 
-      return false; 
+      //window.location.href = "Buyer.py";
+      // } else if (userType === "Seller" && username === "user" && password === "user") {
+      // alert("User login successful");
+
+      //window.location.href = "Buyer.py";
+      //}else {
+      //alert("Invalid credentials");
+      //return false;
+      //}
+
+      //return false; 
     }
   </script>
 </body>
+
 </html>

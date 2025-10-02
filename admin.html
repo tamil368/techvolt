@@ -58,13 +58,7 @@
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
               </div>
             </div>
-            <div class="form-group">
-              <label for="userType">Login as:</label>
-              <select class="form-control" id="userType" name="userType">
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
-              </select>
-            </div>
+      
             <div class="text-center">
               <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block">Login</button>
             </div>
@@ -76,31 +70,31 @@
 
   <script>
     function validateForm() {
-      var username = document.forms["loginForm"]["username"].value;
-      var password = document.forms["loginForm"]["password"].value;
-      var userType = document.forms["loginForm"]["userType"].value;
+    //  var username = document.forms["loginForm"]["username"].value;
+      //var password = document.forms["loginForm"]["password"].value;
+      //var userType = document.forms["loginForm"]["userType"].value;
 
-      if (username == "" || password == "") {
-        alert("Username and Password must be filled out");
-        return false;
-      }
+      //if (username == "" || password == "") {
+        //alert("Username and Password must be filled out");
+        //return false;
+     // }
 
       // You can add further validation and authentication logic here
       // For example, send an AJAX request to the server to validate the credentials
 
       // Example for demonstration purposes:
-      if (userType === "admin" && username === "admin" && password === "admin") {
-        alert("Admin login successful");
+      //if (userType === "admin" && username === "admin" && password === "admin") {
+        //alert("Admin login successful");
         // Redirect to admin dashboard
-        window.location.href = '';
-      } else if (userType === "user" && username === "user" && password === "user") {
-        alert("User login successful");
+        //window.location.href = '';
+      //} else if (userType === "user" && username === "user" && password === "user") {
+        //alert("User login successful");
         // Redirect to user dashboard
-        window.location.href = "user_dashboard.py";
-      } else {
-        alert("Invalid credentials");
-        return false;
-      }
+        //window.location.href = "user_dashboard.py";
+     // } else {
+      //  alert("Invalid credentials");
+       // return false;
+     // }
 
       return false; // Prevent form submission for demonstration purposes
     }
